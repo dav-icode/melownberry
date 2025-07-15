@@ -1,0 +1,338 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Pacifico&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --verde-pastel: #C2E0C6;
+    --rosa-morango: #F9A8C0;
+    --rosa-bebe: #ffe0eb;
+    --rosa-escuro: #EB669B;
+    --rosa-alternativa: #da80a4;
+    --bege-amarelo: #F4C58B;
+    --font-slogan: 'Pacifico', cursive;
+    --font-style: 'Quicksand', sans-serif;
+}
+
+
+
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--rosa-bebe);
+
+
+    font-family: 'Open Sans', sans-serif;
+
+    ul, li {
+        list-style: none;
+        padding: 0;
+        display: inline;
+        margin: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--rosa-escuro);
+        font-size: 1.2rem;
+        font-weight: 600;
+        transition: color 0.3s ease;
+        border-bottom: white solid 1px;
+    }
+
+    a:hover {
+        color: white;
+        border-bottom: solid 1px;
+    }
+}
+
+nav {
+    position: relative;
+    top: -30px;
+}
+
+#logo {
+    position: relative;
+    top: 35px;
+}
+
+body {
+    background-color: var(--verde-pastel);
+    color: var(--rosa-escuro);
+    font-family: var(--font-style);
+    margin: 0;
+    padding: 0;
+
+    p {
+        font-weight: 500;
+    }
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    h1 {
+        font-size: 3em;
+        color: var(--rosa-escuro);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: var(--font-style);
+        font-size: 1.5rem;
+        color: var(--rosa-alternativa);
+        text-align: center;
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+#cardapio {
+    width: 80%;
+    margin: auto;
+}
+
+.sabores {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    gap: 100px;
+
+    img {
+        height: 800px;
+    }
+
+    h2 {
+        font-size: 2.5em;
+        color: var(--rosa-escuro);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.5em;
+        color: var(--rosa-alternativa);
+        text-align: center;
+        width: 800px;
+        margin-top: 20px;
+    }
+}
+
+#morango {
+    margin-bottom: 150px;
+}
+
+#melona {
+    margin-bottom: 150px;
+}
+
+#mista {
+    margin-bottom: 150px;
+}
+
+
+#whatsapp-float {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+    height: 80px;
+    width: 80px;
+}
+
+#whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+#whatsapp-float img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: var(--rosa-bebe);
+    color: var(--rosa-escuro);
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    bottom: 0;
+    font-family: var(--font-style);
+}
+
+
+
+/* Responsividade para telas até 768px */
+@media (max-width: 768px) {
+
+    header ul, header li {
+        text-align: center;
+        margin: 5px;
+    }
+    #hero p {
+        width: 80%;
+        font-size: 1.1em;
+    }
+
+    #cardapio {
+        width: 90%;
+    }
+
+    .sabores {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 100px;
+        align-items: center;
+        align-content: center;
+    }
+
+    .sabores img {
+        height: 450px;
+        max-width: 90vw;
+    }
+
+    .sabores h2 {
+        font-size: 2em;
+    }
+
+    .sabores p {
+        width: 80vw;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    #whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        height: 50px;
+        width: 50px;
+    }
+}
+
+/* Responsividade para telas até 600px */
+@media (max-width: 600px) {
+    header {
+        padding: 10px;
+    }
+
+    header ul, header li {
+        text-align: center;
+        margin: 5px;
+        position: relative;
+        top: 10px;
+    }
+
+    header a {
+        font-size: 1em;
+    }
+
+    #logo {
+        height: 50px;
+        top: 15px;
+    }
+    
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        width: 80vw;
+        font-size: 1em;
+    }
+
+    #cardapio {
+        width: 80vw;
+    }
+    
+    .sabores img {
+        height: 350px;
+        max-width: 80vw;
+    }
+
+    .sabores h2 {
+        font-size: 2em;
+    }
+
+    .sabores p {
+        width: 80vw;
+        font-size: 1em;
+    }
+
+    #whatsapp-float {
+        bottom: 8px;
+        right: 12px;
+        height: 50px;
+        width: 50px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+/* Responsividade para telas até 480px */
+@media (max-width: 480px) {
+    header {
+        padding: 5px;
+    }
+
+    header ul, header li {
+        text-align: center;
+        margin: 2px;
+        position: relative;
+        top: 10px;
+    }
+
+    header a {
+        font-size: 0.9em;
+    }
+
+    #logo {
+        height: 45px;
+        top: 15px;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        width: 80vw;
+        font-size: 1em;
+    }
+
+    .sabores img {
+        height: 300px;
+        max-width: 80vw;
+    }
+
+    .sabores h2 {
+        font-size: 1.8em;
+    }
+
+    .sabores p {
+        width: 80vw;
+        font-size: 0.9em;
+    }
+
+    #whatsapp-float {
+        bottom: 3px;
+        right: 3px;
+        height: 50px;
+        width: 50px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
